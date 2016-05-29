@@ -29,3 +29,6 @@ cd ~/.vim/bundle/YouCompleteMe                # Navigate to YouCompleteMe
 ./install.py                                  # Install YouCompleteMe
 ```
 *Restart Computer*
+
+#### References
+* https://github.com/Valloric/YouCompleteMe/blob/master/README.md#ubuntu-linux-x64
