@@ -22,6 +22,11 @@ Plugin 'jistr/vim-nerdtree-tabs' " Tabs with NERDTree
 Plugin 'kien/ctrlp.vim' " Super Searching
 Plugin 'tpope/vim-fugitive' " Git Integration
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'} " Powerline Status bar
+Plugin 'pangloss/vim-javascript' " Vim Javascript formatting
+Plugin 'mxw/vim-jsx' " JSX formatting
+Plugin 'docunext/closetag.vim' " HTML and CSS closing tags
+Plugin 'raimondi/delimitmate' " Auto-completion for quotes, parens, brackets, etc...
+
 
 " End Plugins
 call vundle#end()            " required
@@ -61,20 +66,15 @@ let g:SimpylFold_docstring_preview=1
 
 
 " INDENTATION
-" PEP8 Indentation
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
-" Indentation for Javascript, HTML, and CSS Files
-au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
+filetype on
+au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.js set filetype=javascript
+autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+autocmd FileType markdown setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType html setlocal ts=2 sts=2 sw=2 noexpandtab
+autocmd FileType css setlocal ts=2 sts=2 sw=2 noexpandtab
+autocmd filetype python setlocal ts=4 sts=4 sw=4 expandtab
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2 noexpandtab
 
 
 " HILIGHTING 
