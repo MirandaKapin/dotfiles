@@ -10,10 +10,11 @@ cd dotfiles/
 ./install.sh
 ```
 
-*Vim*
-```
-:PluginInstall
-```
+### Install Vundle
+*github link: https://github.com/VundleVim/Vundle.vim*
+
+1. `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+2. Launch vim and type `:PluginInstall`
 
 ### YouCompleteMe - Vim Plugin
 
