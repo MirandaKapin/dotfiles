@@ -26,7 +26,7 @@ Plugin 'pangloss/vim-javascript' " Vim Javascript formatting
 Plugin 'mxw/vim-jsx' " JSX formatting
 Plugin 'docunext/closetag.vim' " HTML and CSS closing tags
 Plugin 'raimondi/delimitmate' " Auto-completion for quotes, parens, brackets, etc...
-
+Plugin 'flazz/vim-colorschemes' " MANY vim colorschemes
 
 " End Plugins
 call vundle#end()            " required
@@ -38,7 +38,7 @@ set nu
 
 
 " Setting the Colorscheme
-colorscheme murphy
+colorscheme torte
 
 
 " Hide .pyc files
