@@ -1,0 +1,86 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+'.source.js':
+  'jsx describe - testing':
+    'prefix': 'describe'
+    'body': """
+    describe ('$1', () => {
+    \t
+    });
+    """
+  'jsx it function - testing':
+    'prefix': 'it'
+    'body': """
+    it ('$1', () => {
+    \t
+    });
+    """
+  'arrow function':
+    'prefix': 'arrow'
+    'body': """
+    => {
+      $1
+    };
+    """
+  'setTimeout':
+    'prefix': 'setTimeout'
+    'body': """
+    setTimeout(() => {
+    \t
+    }, $1);
+    """
+  'expect function - testing':
+    'prefix': 'expect'
+    'body': 'expect($1);'
+  'toBe function - testing':
+    'prefix': 'toBe'
+    'body': 'toBe($1)'
+  'done function - testing':
+    'prefix': 'done'
+    'body': 'done();'
+  'getInitialState function':
+    'prefix': 'getInitialState'
+    'body': """
+    getInitialState: function () {
+      return {
+        $1
+      };
+    },
+    """
+  'createStore - Dev Tools':
+    'prefix': 'createStore-dev'
+    'body': """
+    redux.createStore(reducer, redux.compose(
+      window.devToolsExtension ? window.devToolsExtension() : f => f
+    ));
+    """
+  'subscribe-redux-store':
+    'prefix': 'subscribe-redux-store'
+    'body': """
+    //subscribe to changes
+    var unsubscribe = store.subscribe(() => {
+      var state = store.getState();
+      $1
+    });
+    // unsubscribe();
+    """
